@@ -16,13 +16,14 @@
 
 body {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-weight: 400;  /* Increased from 300 for better legibility */
+    font-weight: 500;  /* Increased for better mobile readability */
     line-height: 1.8;
     color: var(--soft-black);
     background: linear-gradient(135deg, var(--cream) 0%, var(--sand) 100%);
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    font-size: 1.1rem;  /* Base font size increased */
 }
 
 body::before {
@@ -131,7 +132,8 @@ body::before {
 .toc-list a {
     color: var(--soft-black);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    font-weight: 500;
     transition: all 0.3s ease;
     display: inline-block;
     position: relative;
@@ -257,8 +259,9 @@ body::before {
 }
 
 .poem-text {
-    font-size: 1.15rem;
-    line-height: 2;
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 2.1;
     color: var(--soft-black);
     white-space: pre-line;
     text-align: left;
@@ -493,45 +496,92 @@ body::before {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    body {
+        font-size: 1.2rem;  /* Even larger base font for mobile */
+        font-weight: 600;  /* Thicker text on mobile */
+    }
+
     .toc-header h1 {
-        font-size: 2.5rem;
-        letter-spacing: 0.2em;
+        font-size: 2.2rem;
+        font-weight: 600;
+        letter-spacing: 0.15em;
+    }
+
+    .toc-header .author {
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+
+    .toc-header .location {
+        font-size: 1.15rem;
+        font-weight: 400;
     }
 
     .toc-list {
         columns: 1;
     }
 
+    .toc-list a {
+        font-size: 1.3rem;
+        font-weight: 600;
+        padding: 8px 0;  /* More touch-friendly spacing */
+    }
+
     .poem-container {
-        padding: 100px 20px 80px;
+        padding: 100px 25px 100px;  /* More padding for better readability */
     }
 
     .poem h2 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 45px;
     }
 
     .poem-text {
-        font-size: 1.05rem;  /* Slightly increased for mobile */
-        font-weight: 500;  /* Bolder weight for mobile readability */
-        line-height: 1.9;  /* Slightly more line height for mobile */
+        font-size: 1.4rem;  /* Much larger for mobile */
+        font-weight: 600;  /* Thicker text */
+        line-height: 2.2;  /* More spacing between lines */
+        letter-spacing: 0.02em;  /* Slight letter spacing for clarity */
     }
 
     .poem-header {
-        padding: 15px 20px;
+        padding: 20px 25px;
     }
 
     .book-title {
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: 500;
         letter-spacing: 0.2em;
     }
 
-    /* Ensure strong contrast on mobile */
-    body {
-        font-weight: 500;
+    .page-number {
+        font-size: 1rem;
+        font-weight: 400;
     }
 
-    .toc-list a {
+    /* Bigger navigation buttons on mobile */
+    .nav-btn {
+        width: 55px;
+        height: 55px;
+        font-size: 1.4rem;
+        border-width: 2.5px;
+    }
+
+    /* Side TOC adjustments */
+    .side-toc {
+        width: 85%;  /* Take up more screen on mobile */
+        left: -85%;
+    }
+
+    .side-toc-list a {
+        font-size: 1.15rem;
         font-weight: 500;
+        padding: 10px 0;
+    }
+
+    .side-toc h2 {
+        font-size: 1.7rem;
+        font-weight: 600;
     }
 }
 
