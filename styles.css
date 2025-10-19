@@ -280,25 +280,62 @@ body::before {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    border: 1px solid var(--sage-green);
-    color: var(--moss);
+    background: transparent;
+    border: 2px solid rgba(139, 147, 127, 0.3); /* sage-green with lower opacity */
+    color: rgba(139, 147, 127, 0.3); /* matching arrow color */
     font-size: 1.2rem;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: 'Raleway', sans-serif;
     font-weight: 300;
+    position: relative;
+    animation: fadeToTransparent 0.5s ease forwards;
+}
+
+@keyframes fadeToTransparent {
+    from {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(139, 147, 127, 0.5);
+        color: rgba(139, 147, 127, 0.5);
+    }
+    to {
+        background: transparent;
+        border-color: rgba(139, 147, 127, 0.3);
+        color: rgba(139, 147, 127, 0.3);
+    }
+}
+
+.nav-btn:active {
+    animation: buttonTap 0.5s ease forwards;
+}
+
+@keyframes buttonTap {
+    0% {
+        background: rgba(139, 147, 127, 0.15);
+        border-color: rgba(139, 147, 127, 0.6);
+        color: rgba(139, 147, 127, 0.6);
+        transform: scale(1.1);
+    }
+    100% {
+        background: transparent;
+        border-color: rgba(139, 147, 127, 0.3);
+        color: rgba(139, 147, 127, 0.3);
+        transform: scale(1);
+    }
 }
 
 .nav-btn:hover:not(:disabled) {
-    background: var(--sage-green);
-    color: white;
+    border-color: rgba(139, 147, 127, 0.6);
+    color: rgba(139, 147, 127, 0.6);
+    background: rgba(139, 147, 127, 0.05);
     transform: scale(1.1);
 }
 
 .nav-btn:disabled {
-    opacity: 0.3;
+    opacity: 0.2;
     cursor: not-allowed;
+    border-color: rgba(139, 147, 127, 0.15);
+    color: rgba(139, 147, 127, 0.15);
 }
 
 #toc-btn {
