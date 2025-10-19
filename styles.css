@@ -497,23 +497,23 @@ body::before {
 /* Responsive Design */
 @media (max-width: 768px) {
     body {
-        font-size: 2.2rem;  /* 2x larger base font for mobile */
+        font-size: 1.65rem;  /* 75% of 2.2rem */
         font-weight: 600;  /* Thicker text on mobile */
     }
 
     .toc-header h1 {
-        font-size: 3.5rem;
+        font-size: 2.6rem;  /* 75% of 3.5rem */
         font-weight: 700;
         letter-spacing: 0.1em;
     }
 
     .toc-header .author {
-        font-size: 2.2rem;
+        font-size: 1.65rem;
         font-weight: 600;
     }
 
     .toc-header .location {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 500;
     }
 
@@ -522,65 +522,65 @@ body::before {
     }
 
     .toc-list a {
-        font-size: 2.2rem;
+        font-size: 1.65rem;
         font-weight: 600;
-        padding: 15px 0;  /* More touch-friendly spacing */
+        padding: 12px 0;  /* More touch-friendly spacing */
     }
 
     .poem-container {
-        padding: 120px 20px 120px;  /* More padding for better readability */
+        padding: 100px 20px 100px;  /* More padding for better readability */
     }
 
     .poem h2 {
-        font-size: 3rem;
+        font-size: 2.25rem;  /* 75% of 3rem */
         font-weight: 700;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
     }
 
     .poem-text {
-        font-size: 2.6rem;  /* 2x larger for mobile */
+        font-size: 1.95rem;  /* 75% of 2.6rem */
         font-weight: 600;  /* Thicker text */
-        line-height: 1.8;  /* Adjusted line height for larger text */
+        line-height: 1.9;  /* Adjusted line height */
         letter-spacing: 0.02em;  /* Slight letter spacing for clarity */
     }
 
     .poem-header {
-        padding: 25px 20px;
+        padding: 22px 20px;
     }
 
     .book-title {
-        font-size: 1.8rem;
+        font-size: 1.35rem;
         font-weight: 600;
         letter-spacing: 0.15em;
     }
 
     .page-number {
-        font-size: 1.6rem;
+        font-size: 1.2rem;
         font-weight: 500;
     }
 
     /* Bigger navigation buttons on mobile */
     .nav-btn {
-        width: 70px;
-        height: 70px;
-        font-size: 2rem;
-        border-width: 3px;
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+        border-width: 2.5px;
     }
 
     /* Side TOC adjustments */
     .side-toc {
-        width: 90%;  /* Take up more screen on mobile */
-        left: -90%;
+        width: 85%;  /* Take up more screen on mobile */
+        left: -85%;
     }
 
     .side-toc-list a {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight: 600;
-        padding: 15px 0;
+        padding: 12px 0;
     }
 
     .side-toc h2 {
-        font-size: 2.8rem;
+        font-size: 2.1rem;
         font-weight: 700;
     }
 }
