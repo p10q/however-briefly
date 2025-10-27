@@ -279,6 +279,13 @@ body::before {
     z-index: 10;
 }
 
+.home-nav {
+    position: fixed;
+    bottom: 40px;
+    left: 40px;
+    z-index: 10;
+}
+
 .nav-btn {
     width: 50px;
     height: 50px;
@@ -341,6 +348,10 @@ body::before {
     color: rgba(139, 147, 127, 0.15);
 }
 
+#home-btn {
+    /* Use default nav-btn styling for circular button */
+}
+
 #toc-btn {
     border: none;
     background: transparent;
@@ -348,11 +359,14 @@ body::before {
     width: auto;
     height: auto;
     color: var(--moss);
+    border-radius: 0;
 }
 
 #toc-btn:hover {
     color: var(--earth-brown);
     transform: none;
+    background: transparent;
+    border: none;
 }
 
 /* Side TOC Modal */

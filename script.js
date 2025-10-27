@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toc = document.getElementById('toc');
     const poemViewer = document.getElementById('poem-viewer');
+    const homeBtn = document.getElementById('home-btn');
     const tocBtn = document.getElementById('toc-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
@@ -17,6 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const totalPoems = poems.length;
 
     // Start reading when clicking any TOC link on main page
+
+    // Home button - returns to main table of contents
+    homeBtn.addEventListener('click', () => {
+        showTableOfContents();
+    });
 
     // Table of contents button - now opens side modal
     tocBtn.addEventListener('click', () => {
